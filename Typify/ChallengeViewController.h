@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Challenge.h"
 
-@interface ViewController : UIViewController
+@interface ChallengeViewController : UIViewController
 
+@property (nonatomic) Challenge *currentChallenge;
 
 @end
 

@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		095A9DF71A72F5190066C3A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A9DF61A72F5190066C3A2 /* main.m */; };
 		095A9DFA1A72F5190066C3A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A9DF91A72F5190066C3A2 /* AppDelegate.m */; };
-		095A9DFD1A72F5190066C3A2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A9DFC1A72F5190066C3A2 /* ViewController.m */; };
+		095A9DFD1A72F5190066C3A2 /* ChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A9DFC1A72F5190066C3A2 /* ChallengeViewController.m */; };
 		095A9E001A72F5190066C3A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095A9DFE1A72F5190066C3A2 /* Main.storyboard */; };
 		095A9E021A72F5190066C3A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 095A9E011A72F5190066C3A2 /* Images.xcassets */; };
 		095A9E051A72F5190066C3A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095A9E031A72F5190066C3A2 /* LaunchScreen.xib */; };
 		095A9E111A72F5190066C3A2 /* TypifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 095A9E101A72F5190066C3A2 /* TypifyTests.m */; };
+		098CCC9F1A73065D00D7E0AE /* ChallengeLevelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098CCC9E1A73065D00D7E0AE /* ChallengeLevelController.m */; };
+		098CCCA21A7306A200D7E0AE /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 098CCCA11A7306A200D7E0AE /* Challenge.m */; };
+		098CCCA51A73084300D7E0AE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098CCCA41A73084300D7E0AE /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,20 @@
 		095A9DF61A72F5190066C3A2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		095A9DF81A72F5190066C3A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		095A9DF91A72F5190066C3A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		095A9DFB1A72F5190066C3A2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		095A9DFC1A72F5190066C3A2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		095A9DFB1A72F5190066C3A2 /* ChallengeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChallengeViewController.h; sourceTree = "<group>"; };
+		095A9DFC1A72F5190066C3A2 /* ChallengeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChallengeViewController.m; sourceTree = "<group>"; };
 		095A9DFF1A72F5190066C3A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		095A9E011A72F5190066C3A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		095A9E041A72F5190066C3A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		095A9E0A1A72F5190066C3A2 /* TypifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		095A9E0F1A72F5190066C3A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		095A9E101A72F5190066C3A2 /* TypifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TypifyTests.m; sourceTree = "<group>"; };
+		098CCC9D1A73065D00D7E0AE /* ChallengeLevelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeLevelController.h; sourceTree = "<group>"; };
+		098CCC9E1A73065D00D7E0AE /* ChallengeLevelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeLevelController.m; sourceTree = "<group>"; };
+		098CCCA01A7306A200D7E0AE /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
+		098CCCA11A7306A200D7E0AE /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
+		098CCCA31A73084300D7E0AE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		098CCCA41A73084300D7E0AE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +92,12 @@
 			children = (
 				095A9DF81A72F5190066C3A2 /* AppDelegate.h */,
 				095A9DF91A72F5190066C3A2 /* AppDelegate.m */,
-				095A9DFB1A72F5190066C3A2 /* ViewController.h */,
-				095A9DFC1A72F5190066C3A2 /* ViewController.m */,
+				098CCCA31A73084300D7E0AE /* HomeViewController.h */,
+				098CCCA41A73084300D7E0AE /* HomeViewController.m */,
+				095A9DFB1A72F5190066C3A2 /* ChallengeViewController.h */,
+				095A9DFC1A72F5190066C3A2 /* ChallengeViewController.m */,
+				098CCCA61A730A2C00D7E0AE /* Challenge Object */,
+				098CCCA71A730A3400D7E0AE /* Logic */,
 				095A9DFE1A72F5190066C3A2 /* Main.storyboard */,
 				095A9E011A72F5190066C3A2 /* Images.xcassets */,
 				095A9E031A72F5190066C3A2 /* LaunchScreen.xib */,
@@ -117,6 +130,24 @@
 				095A9E0F1A72F5190066C3A2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		098CCCA61A730A2C00D7E0AE /* Challenge Object */ = {
+			isa = PBXGroup;
+			children = (
+				098CCCA01A7306A200D7E0AE /* Challenge.h */,
+				098CCCA11A7306A200D7E0AE /* Challenge.m */,
+			);
+			name = "Challenge Object";
+			sourceTree = "<group>";
+		};
+		098CCCA71A730A3400D7E0AE /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				098CCC9D1A73065D00D7E0AE /* ChallengeLevelController.h */,
+				098CCC9E1A73065D00D7E0AE /* ChallengeLevelController.m */,
+			);
+			name = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				095A9DFD1A72F5190066C3A2 /* ViewController.m in Sources */,
+				098CCC9F1A73065D00D7E0AE /* ChallengeLevelController.m in Sources */,
+				098CCCA21A7306A200D7E0AE /* Challenge.m in Sources */,
+				095A9DFD1A72F5190066C3A2 /* ChallengeViewController.m in Sources */,
 				095A9DFA1A72F5190066C3A2 /* AppDelegate.m in Sources */,
 				095A9DF71A72F5190066C3A2 /* main.m in Sources */,
+				098CCCA51A73084300D7E0AE /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +446,7 @@
 				095A9E161A72F5190066C3A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		095A9E171A72F5190066C3A2 /* Build configuration list for PBXNativeTarget "TypifyTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +455,7 @@
 				095A9E191A72F5190066C3A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
