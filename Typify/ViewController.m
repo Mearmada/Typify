@@ -69,7 +69,7 @@
     [super viewDidLoad];
     
     Challenge *firstChallenge = [Challenge new];
-    firstChallenge.text = @"poop poop poop";
+    firstChallenge.text = @"";
     
     [self startChallenge:firstChallenge];
 }
@@ -77,11 +77,12 @@
 - (void)startChallenge:(Challenge *)challenge {
     self.currentChallenge = challenge;
     AVSpeechUtterance *spokentext = [AVSpeechUtterance speechUtteranceWithString:challenge.text];
+    spokentext.rate = AVSpeechUtteranceMinimumSpeechRate;
+    spokentext.pitchMultiplier = .3;
+    
     AVSpeechSynthesizer *speechsynthesizer = [AVSpeechSynthesizer new];
     [speechsynthesizer speakUtterance:spokentext];
-    
-    [speechsynthesizer speakUtterance:spokentext];
-    
+        
     self.textToTypeLabel.text = challenge.text;
     self.textField.text = @"";
     self.textToTypeLabel.textColor = challenge.displayTextColor;
