@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+@import AVFoundation;
+
 /*
  what makes up a challenge for this app?
  
@@ -74,6 +76,11 @@
 
 - (void)startChallenge:(Challenge *)challenge {
     self.currentChallenge = challenge;
+    AVSpeechUtterance *spokentext = [AVSpeechUtterance speechUtteranceWithString:challenge.text];
+    AVSpeechSynthesizer *speechsynthesizer = [AVSpeechSynthesizer new];
+    [speechsynthesizer speakUtterance:spokentext];
+    
+    [speechsynthesizer speakUtterance:spokentext];
     
     self.textToTypeLabel.text = challenge.text;
     self.textField.text = @"";
