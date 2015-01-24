@@ -12,6 +12,8 @@
 @interface ChallengeViewController : UIViewController
 
 @property (nonatomic) Challenge *currentChallenge;
+@property (nonatomic) int challengeIndex;
+
 
 @end
 

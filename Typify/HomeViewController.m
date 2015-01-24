@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "ChallengeViewController.h"
 #import "ChallengeLevelController.h"
+#import "DifficultyTableViewController.h"
 
 @interface HomeViewController ()
 
@@ -25,20 +26,30 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"loadFirstEasy"]) {
-        ChallengeViewController *vc = segue.destinationViewController;
-        
-        Challenge *randomChallenge = self.levelController.easyChallenges[arc4random() % self.levelController.easyChallenges.count];
-        
-        vc.currentChallenge = randomChallenge;
+    if ([segue.identifier isEqualToString:@"loadEasyChallenges"]) {
+        DifficultyTableViewController *vc = segue.destinationViewController;
+        vc.challengesArray = self.levelController.easyChallenges;
+        vc.title = @"Easy Challenges";
     }
-    else if ([segue.identifier isEqualToString:@"loadFirstMedium"]) {
-        ChallengeViewController *vc = segue.destinationViewController;
-        vc.currentChallenge = [ChallengeLevelController new].mediumChallenges.firstObject;
+    else if ([segue.identifier isEqualToString:@"loadMediumChallenges"]) {
+        DifficultyTableViewController *vc = segue.destinationViewController;
+        vc.challengesArray = self.levelController.mediumChallenges;
+        vc.title = @"Medium Challenges";
     }
-    else if ([segue.identifier isEqualToString:@"loadFirstHard"]) {
-        ChallengeViewController *vc = segue.destinationViewController;
-        vc.currentChallenge = self.levelController.hardChallenges.firstObject;
+    else if ([segue.identifier isEqualToString:@"loadHardChallenges"]) {
+        DifficultyTableViewController *vc = segue.destinationViewController;
+        vc.challengesArray = self.levelController.hardChallenges;
+        vc.title = @"Hard Challenges";
+    }
+    else if ([segue.identifier isEqualToString:@"loadExpertChallenges"]) {
+        DifficultyTableViewController *vc = segue.destinationViewController;
+        vc.challengesArray = self.levelController.expertChallenges;
+        vc.title = @"Expert Challenges";
+    }
+    else if ([segue.identifier isEqualToString:@"loadMasterChallenges"]) {
+        DifficultyTableViewController *vc = segue.destinationViewController;
+        vc.challengesArray = self.levelController.masterChallenges;
+        vc.title = @"Master Challenges";
     }
 }
 

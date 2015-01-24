@@ -5,6 +5,36 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="4zS-a6-5r4">
+            <objects>
+                <tableViewController id="YqT-ZQ-ire" customClass="DifficultyTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iZ7-UN-kRY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cdZ-LK-RNS">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cdZ-LK-RNS" id="p9G-vc-6VW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YqT-ZQ-ire" id="uU6-Ec-XGa"/>
+                            <outlet property="delegate" destination="YqT-ZQ-ire" id="tja-pb-rP6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="l1j-UM-Z5B"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="startChallenge" id="VXn-Vt-lDC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEW-vt-d5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="656"/>
+        </scene>
         <!--Challenge-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -66,7 +96,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685" y="1205"/>
+            <point key="canvasLocation" x="2799" y="1445"/>
+        </scene>
+        <!--Personal Statistics-->
+        <scene sceneID="Vzh-f0-Z6d">
+            <objects>
+                <viewController id="0mK-hi-IYw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3nl-eM-ouB"/>
+                        <viewControllerLayoutGuide type="bottom" id="PKg-6x-6Oy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Udo-05-Foc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Personal Statistics" id="EfZ-sy-1yd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9If-dw-PnS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908" y="662"/>
         </scene>
         <!--Typify-->
         <scene sceneID="BRI-JX-SEZ">
@@ -81,48 +130,89 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-F5-BRY">
-                                <rect key="frame" x="272" y="285" width="56" height="30"/>
+                                <rect key="frame" x="272" y="215" width="56" height="30"/>
                                 <state key="normal" title="Medium">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="loadFirstMedium" id="rtz-BZ-Rwo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0B-ZA-gei">
-                                <rect key="frame" x="284" y="215" width="33" height="30"/>
-                                <state key="normal" title="Easy">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="loadFirstEasy" id="Ggj-3u-TXc"/>
+                                    <segue destination="YqT-ZQ-ire" kind="show" identifier="loadMediumChallenges" id="7DI-V0-mZM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq5-Vq-QoW">
-                                <rect key="frame" x="283" y="355" width="34" height="30"/>
+                                <rect key="frame" x="283" y="285" width="34" height="30"/>
                                 <state key="normal" title="Hard">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="loadFirstHard" id="9b9-54-h4w"/>
+                                    <segue destination="YqT-ZQ-ire" kind="show" identifier="loadHardChallenges" id="U0R-9k-fVz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36f-pk-dHk">
+                                <rect key="frame" x="278" y="355" width="45" height="30"/>
+                                <state key="normal" title="Expert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YqT-ZQ-ire" kind="show" identifier="loadExpertChallenges" id="vo7-IF-Ep2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzg-i8-gky">
+                                <rect key="frame" x="276" y="425" width="48" height="30"/>
+                                <state key="normal" title="Master">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YqT-ZQ-ire" kind="show" identifier="loadMasterChallenges" id="NKY-ff-jYt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9e-yY-wNd">
+                                <rect key="frame" x="467" y="550" width="97" height="30"/>
+                                <state key="normal" title="Achievements">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULR-fL-Hm2">
+                                <rect key="frame" x="36" y="550" width="36" height="30"/>
+                                <state key="normal" title="Stats">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0mK-hi-IYw" kind="show" identifier="showStats" id="AJI-EC-Qcp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0B-ZA-gei">
+                                <rect key="frame" x="284" y="145" width="33" height="30"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YqT-ZQ-ire" kind="show" identifier="loadEasyChallenges" id="c3L-zc-M3u"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rq5-Vq-QoW" firstAttribute="top" secondItem="CUX-F5-BRY" secondAttribute="bottom" constant="40" id="9hh-rc-aDj"/>
-                            <constraint firstAttribute="centerX" secondItem="d0B-ZA-gei" secondAttribute="centerX" id="KeJ-W9-EQS"/>
-                            <constraint firstAttribute="centerX" secondItem="Rq5-Vq-QoW" secondAttribute="centerX" id="XOt-Li-alo"/>
-                            <constraint firstItem="CUX-F5-BRY" firstAttribute="top" secondItem="d0B-ZA-gei" secondAttribute="bottom" constant="40" id="d4z-yM-muO"/>
-                            <constraint firstAttribute="centerX" secondItem="CUX-F5-BRY" secondAttribute="centerX" id="g46-yE-cdu"/>
-                            <constraint firstAttribute="centerY" secondItem="CUX-F5-BRY" secondAttribute="centerY" id="nRJ-T9-rZf"/>
+                            <constraint firstItem="Rq5-Vq-QoW" firstAttribute="top" secondItem="CUX-F5-BRY" secondAttribute="bottom" constant="40" id="1OK-1m-pOm"/>
+                            <constraint firstAttribute="centerX" secondItem="Rq5-Vq-QoW" secondAttribute="centerX" id="2Ga-48-wgq"/>
+                            <constraint firstAttribute="centerX" secondItem="d0B-ZA-gei" secondAttribute="centerX" id="6v3-G6-o3R"/>
+                            <constraint firstItem="ULR-fL-Hm2" firstAttribute="leading" secondItem="X9D-SJ-KuV" secondAttribute="leadingMargin" constant="20" id="7eA-Jm-52v"/>
+                            <constraint firstAttribute="centerX" secondItem="Bzg-i8-gky" secondAttribute="centerX" id="MMH-7m-Jby"/>
+                            <constraint firstItem="36f-pk-dHk" firstAttribute="top" secondItem="Rq5-Vq-QoW" secondAttribute="bottom" constant="40" id="O9C-hA-lpe"/>
+                            <constraint firstItem="Bzg-i8-gky" firstAttribute="top" secondItem="36f-pk-dHk" secondAttribute="bottom" constant="40" id="OXD-R8-tqn"/>
+                            <constraint firstItem="fR8-yh-3I3" firstAttribute="top" secondItem="O9e-yY-wNd" secondAttribute="bottom" constant="20" id="Umo-fI-Sa5"/>
+                            <constraint firstAttribute="centerX" secondItem="CUX-F5-BRY" secondAttribute="centerX" id="baC-Lc-mN5"/>
+                            <constraint firstAttribute="centerX" secondItem="36f-pk-dHk" secondAttribute="centerX" id="lJQ-j6-xqF"/>
+                            <constraint firstItem="CUX-F5-BRY" firstAttribute="top" secondItem="d0B-ZA-gei" secondAttribute="bottom" constant="40" id="oE6-3h-CgE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O9e-yY-wNd" secondAttribute="trailing" constant="20" id="rGt-F9-pje"/>
+                            <constraint firstAttribute="centerY" secondItem="Rq5-Vq-QoW" secondAttribute="centerY" id="ri1-Xk-RMW"/>
+                            <constraint firstItem="fR8-yh-3I3" firstAttribute="top" secondItem="ULR-fL-Hm2" secondAttribute="bottom" constant="20" id="vad-vU-DLk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Typify" id="VgX-Tt-7kC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkW-dZ-tbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="1205"/>
+            <point key="canvasLocation" x="1908" y="1423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nSC-Wz-hfo">
@@ -140,10 +230,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxw-0G-hlm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="1205"/>
+            <point key="canvasLocation" x="1134" y="1445"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9b9-54-h4w"/>
+        <segue reference="c3L-zc-M3u"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -29,6 +29,7 @@
     
     if (self.currentChallenge != nil) {
         [self startChallenge:self.currentChallenge];
+        self.title = [NSString stringWithFormat:@"Challenge %d", self.challengeIndex + 1];
     }
 }
 
@@ -75,7 +76,7 @@
         // you winz
         [self.currentTimer invalidate];
         
-        NSLog(@"you win bitch. it took you %f seconds", self.elapsedTime);
+        NSLog(@"you win! it took you %f seconds", self.elapsedTime);
         
         self.elapsedTime = 0;
     }
