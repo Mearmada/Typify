@@ -1,0 +1,11 @@
+[
+    {
+        "text": "potato onion monionieownfiodsji",
+        "backspacePenalty": 20,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        },
+        "textColor": [255, 0, 0, 255]
+    }
+]

@@ -10,6 +10,33 @@
 
 @implementation Challenge
 
++ (NSArray *)challengesFromFile:(NSString *)name {
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"json"];
+    NSMutableArray *challenges = [[NSMutableArray alloc] init];
+    for (NSDictionary *challengeJSON in [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:path] options:0 error:nil]) {
+        Challenge *c = [Challenge challengeWithText:challengeJSON[@"text"] backspacePenalty:[challengeJSON[@"backspacePenalty"] doubleValue]];
+        
+        NSArray *objects;
+        if ((objects = challengeJSON[@"textColor"]) != nil) {
+            CGFloat r,g,b,a;
+            r = [objects[0] floatValue];
+            g = [objects[1] floatValue];
+            b = [objects[2] floatValue];
+            a = [objects[3] floatValue];
+            
+            c.displayTextColor = [UIColor colorWithRed:r / 255 green:g / 255 blue:b / 255 alpha:a / 255];
+        }
+        
+        NSDictionary *dict;
+        if ((dict = challengeJSON[@"font"]) != nil) {
+            c.displayTextFont = [UIFont fontWithName:dict[@"name"] size:[dict[@"size"] intValue]];
+        }
+        
+        [challenges addObject:c];
+    }
+    return challenges.copy;
+}
+
 + (Challenge *)challengeWithText:(NSString *)text {
     Challenge *challenge = [self new];
     challenge.text = text;
@@ -30,10 +57,14 @@
 }
 
 + (Challenge *)challengeWithText:(NSString *)text backspacePenalty:(double)penalty {
-    Challenge *c = [self challengeWithText:text];
-    c.backspacePenalty = penalty;
+    Challenge *challenge = [self challengeWithText:text];
+    challenge.backspacePenalty = penalty;
 
-    return c;
+    return challenge;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%@, text=%@", [super description], self.text];
 }
 
 - (id)init {

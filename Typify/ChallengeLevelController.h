@@ -13,5 +13,7 @@
 @property (nonatomic) NSArray *easyChallenges;
 @property (nonatomic) NSArray *mediumChallenges;
 @property (nonatomic) NSArray *hardChallenges;
+@property (nonatomic) NSArray *expertChallenges;
+@property (nonatomic) NSArray *masterChallenges;
 
 @end

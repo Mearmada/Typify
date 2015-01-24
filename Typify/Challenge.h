@@ -24,9 +24,12 @@
 
 @interface Challenge : NSObject
 
++ (NSArray *)challengesFromFile:(NSString *)name;
+
 + (Challenge *)challengeWithText:(NSString *)text;
 + (Challenge *)challengeWithText:(NSString *)text font:(UIFont *)font;
 + (Challenge *)challengeWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor *)color;
++ (Challenge *)challengeWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor *)color backspacePenalty:(double)penalty;
 + (Challenge *)challengeWithText:(NSString *)text backspacePenalty:(double)penalty;
 
 @property (nonatomic) NSString *text;

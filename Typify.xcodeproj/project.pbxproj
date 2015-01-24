@@ -17,6 +17,12 @@
 		098CCC9F1A73065D00D7E0AE /* ChallengeLevelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098CCC9E1A73065D00D7E0AE /* ChallengeLevelController.m */; };
 		098CCCA21A7306A200D7E0AE /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 098CCCA11A7306A200D7E0AE /* Challenge.m */; };
 		098CCCA51A73084300D7E0AE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 098CCCA41A73084300D7E0AE /* HomeViewController.m */; };
+		14514D921A733E15006848C5 /* DifficultyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14514D911A733E15006848C5 /* DifficultyTableViewController.m */; };
+		14514D941A736169006848C5 /* easy.json in Resources */ = {isa = PBXBuildFile; fileRef = 14514D931A736169006848C5 /* easy.json */; };
+		14514D961A7363E0006848C5 /* medium.json in Resources */ = {isa = PBXBuildFile; fileRef = 14514D951A7363E0006848C5 /* medium.json */; };
+		14514D981A736426006848C5 /* master.json in Resources */ = {isa = PBXBuildFile; fileRef = 14514D971A736426006848C5 /* master.json */; };
+		14514D9A1A736432006848C5 /* expert.json in Resources */ = {isa = PBXBuildFile; fileRef = 14514D991A736432006848C5 /* expert.json */; };
+		14514D9C1A736439006848C5 /* hard.json in Resources */ = {isa = PBXBuildFile; fileRef = 14514D9B1A736439006848C5 /* hard.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,13 @@
 		098CCCA11A7306A200D7E0AE /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
 		098CCCA31A73084300D7E0AE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		098CCCA41A73084300D7E0AE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		14514D901A733E15006848C5 /* DifficultyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyTableViewController.h; sourceTree = "<group>"; };
+		14514D911A733E15006848C5 /* DifficultyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyTableViewController.m; sourceTree = "<group>"; };
+		14514D931A736169006848C5 /* easy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = easy.json; sourceTree = "<group>"; };
+		14514D951A7363E0006848C5 /* medium.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medium.json; sourceTree = "<group>"; };
+		14514D971A736426006848C5 /* master.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = master.json; sourceTree = "<group>"; };
+		14514D991A736432006848C5 /* expert.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = expert.json; sourceTree = "<group>"; };
+		14514D9B1A736439006848C5 /* hard.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hard.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +107,8 @@
 				095A9DF91A72F5190066C3A2 /* AppDelegate.m */,
 				098CCCA31A73084300D7E0AE /* HomeViewController.h */,
 				098CCCA41A73084300D7E0AE /* HomeViewController.m */,
+				14514D901A733E15006848C5 /* DifficultyTableViewController.h */,
+				14514D911A733E15006848C5 /* DifficultyTableViewController.m */,
 				095A9DFB1A72F5190066C3A2 /* ChallengeViewController.h */,
 				095A9DFC1A72F5190066C3A2 /* ChallengeViewController.m */,
 				098CCCA61A730A2C00D7E0AE /* Challenge Object */,
@@ -146,6 +161,11 @@
 			children = (
 				098CCC9D1A73065D00D7E0AE /* ChallengeLevelController.h */,
 				098CCC9E1A73065D00D7E0AE /* ChallengeLevelController.m */,
+				14514D931A736169006848C5 /* easy.json */,
+				14514D951A7363E0006848C5 /* medium.json */,
+				14514D9B1A736439006848C5 /* hard.json */,
+				14514D991A736432006848C5 /* expert.json */,
+				14514D971A736426006848C5 /* master.json */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -230,9 +250,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14514D9C1A736439006848C5 /* hard.json in Resources */,
+				14514D9A1A736432006848C5 /* expert.json in Resources */,
+				14514D961A7363E0006848C5 /* medium.json in Resources */,
+				14514D981A736426006848C5 /* master.json in Resources */,
 				095A9E001A72F5190066C3A2 /* Main.storyboard in Resources */,
 				095A9E051A72F5190066C3A2 /* LaunchScreen.xib in Resources */,
 				095A9E021A72F5190066C3A2 /* Images.xcassets in Resources */,
+				14514D941A736169006848C5 /* easy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +278,7 @@
 				098CCC9F1A73065D00D7E0AE /* ChallengeLevelController.m in Sources */,
 				098CCCA21A7306A200D7E0AE /* Challenge.m in Sources */,
 				095A9DFD1A72F5190066C3A2 /* ChallengeViewController.m in Sources */,
+				14514D921A733E15006848C5 /* DifficultyTableViewController.m in Sources */,
 				095A9DFA1A72F5190066C3A2 /* AppDelegate.m in Sources */,
 				095A9DF71A72F5190066C3A2 /* main.m in Sources */,
 				098CCCA51A73084300D7E0AE /* HomeViewController.m in Sources */,
