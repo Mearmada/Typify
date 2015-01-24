@@ -11,7 +11,7 @@
 
 @import AVFoundation;
 
-@interface ChallengeViewController ()
+@interface ChallengeViewController () <UITextFieldDelegate>
 
 @property (nonatomic) IBOutlet UITextField *textField;
 @property (nonatomic) IBOutlet UILabel *textToTypeLabel;
@@ -32,8 +32,23 @@
     }
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    BOOL isBackspace = range.length == 1 && string.length == 0;
+    
+    if (isBackspace) {
+        if (self.currentChallenge.backspacePenalty != 0) {
+            self.elapsedTime += self.currentChallenge.backspacePenalty;
+            self.timerLabel.text = [NSString stringWithFormat:@"Elapsed time: %.02f seconds", self.elapsedTime];
+        }
+    }
+    
+    return YES;
+}
+
 - (void)startChallenge:(Challenge *)challenge {
     self.currentChallenge = challenge;
+    
+    self.elapsedTime = 0;
     
     self.textToTypeLabel.text = challenge.text;
     self.textField.text = @"";
@@ -44,6 +59,11 @@
     [self.textField becomeFirstResponder];
     
     self.currentTimer = [NSTimer scheduledTimerWithTimeInterval:.01 target:self selector:@selector(timerFired) userInfo:nil repeats:YES];
+}
+
+- (IBAction)restartCurrentChallenge:(id)sender {
+    [self.currentTimer invalidate];
+    [self startChallenge:self.currentChallenge];
 }
 
 - (void)timerFired {

@@ -22,6 +22,20 @@
     return challenge;
 }
 
++ (Challenge *)challengeWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor *)color {
+    Challenge *challenge = [self challengeWithText:text font:font];
+    challenge.displayTextColor = textColor;
+    challenge.displayBackgroundColor = color;
+    return challenge;
+}
+
++ (Challenge *)challengeWithText:(NSString *)text backspacePenalty:(double)penalty {
+    Challenge *c = [self challengeWithText:text];
+    c.backspacePenalty = penalty;
+
+    return c;
+}
+
 - (id)init {
     self = [super init];
     
@@ -30,6 +44,7 @@
     self.displayTextColor = [UIColor blackColor];
     self.displayBackgroundColor = [UIColor whiteColor];
     self.displayTextFont = [UIFont systemFontOfSize:20];
+    self.backspacePenalty = 0;
     
     return self;
 }

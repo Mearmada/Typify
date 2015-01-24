@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ab-ak-53c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Ab-ak-53c">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -27,6 +27,9 @@
                                 <rect key="frame" x="56" y="125" width="488" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="zuH-Qg-CWy"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer shibby" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz4-ct-V2i">
                                 <rect key="frame" x="36" y="165" width="528" height="17"/>
@@ -48,7 +51,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="mz4-ct-V2i" secondAttribute="trailing" constant="20" id="y68-NK-k3l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Challenge" id="TMv-PQ-cv8"/>
+                    <navigationItem key="navigationItem" title="Challenge" id="TMv-PQ-cv8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="nZG-qj-y0L">
+                            <connections>
+                                <action selector="restartCurrentChallenge:" destination="vXZ-lx-hvc" id="H7F-ks-WY8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textField" destination="Gdc-cc-rw9" id="gFS-uz-RKG"/>
                         <outlet property="textToTypeLabel" destination="5zz-Hx-Qn9" id="0BE-at-lTW"/>
@@ -71,17 +80,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-F5-BRY">
-                                <rect key="frame" x="100" y="114" width="160" height="30"/>
-                                <state key="normal" title="Load first medium level">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUX-F5-BRY">
+                                <rect key="frame" x="272" y="285" width="56" height="30"/>
+                                <state key="normal" title="Medium">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="show" identifier="loadFirstMedium" id="rtz-BZ-Rwo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0B-ZA-gei">
+                                <rect key="frame" x="284" y="215" width="33" height="30"/>
+                                <state key="normal" title="Easy">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="loadFirstEasy" id="Ggj-3u-TXc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq5-Vq-QoW">
+                                <rect key="frame" x="283" y="355" width="34" height="30"/>
+                                <state key="normal" title="Hard">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="loadFirstHard" id="9b9-54-h4w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rq5-Vq-QoW" firstAttribute="top" secondItem="CUX-F5-BRY" secondAttribute="bottom" constant="40" id="9hh-rc-aDj"/>
+                            <constraint firstAttribute="centerX" secondItem="d0B-ZA-gei" secondAttribute="centerX" id="KeJ-W9-EQS"/>
+                            <constraint firstAttribute="centerX" secondItem="Rq5-Vq-QoW" secondAttribute="centerX" id="XOt-Li-alo"/>
+                            <constraint firstItem="CUX-F5-BRY" firstAttribute="top" secondItem="d0B-ZA-gei" secondAttribute="bottom" constant="40" id="d4z-yM-muO"/>
+                            <constraint firstAttribute="centerX" secondItem="CUX-F5-BRY" secondAttribute="centerX" id="g46-yE-cdu"/>
+                            <constraint firstAttribute="centerY" secondItem="CUX-F5-BRY" secondAttribute="centerY" id="nRJ-T9-rZf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Typify" id="VgX-Tt-7kC"/>
                 </viewController>
@@ -108,4 +143,7 @@
             <point key="canvasLocation" x="1112" y="1205"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9b9-54-h4w"/>
+    </inferredMetricsTieBreakers>
 </document>

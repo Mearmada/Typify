@@ -26,6 +26,8 @@
 
 + (Challenge *)challengeWithText:(NSString *)text;
 + (Challenge *)challengeWithText:(NSString *)text font:(UIFont *)font;
++ (Challenge *)challengeWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor *)color;
++ (Challenge *)challengeWithText:(NSString *)text backspacePenalty:(double)penalty;
 
 @property (nonatomic) NSString *text;
 @property (nonatomic) BOOL speaksText;
@@ -33,5 +35,6 @@
 @property (nonatomic) UIColor *displayTextColor;
 @property (nonatomic) UIColor *displayBackgroundColor;
 @property (nonatomic) UIFont *displayTextFont;
+@property (nonatomic) double backspacePenalty;
 
 @end

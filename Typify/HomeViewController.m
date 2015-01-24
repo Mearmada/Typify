@@ -12,25 +12,33 @@
 
 @interface HomeViewController ()
 
+@property (nonatomic) ChallengeLevelController *levelController;
+
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.levelController = [ChallengeLevelController new];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"loadFirstMedium"]) {
+    if ([segue.identifier isEqualToString:@"loadFirstEasy"]) {
+        ChallengeViewController *vc = segue.destinationViewController;
+        
+        Challenge *randomChallenge = self.levelController.easyChallenges[arc4random() % self.levelController.easyChallenges.count];
+        
+        vc.currentChallenge = randomChallenge;
+    }
+    else if ([segue.identifier isEqualToString:@"loadFirstMedium"]) {
         ChallengeViewController *vc = segue.destinationViewController;
         vc.currentChallenge = [ChallengeLevelController new].mediumChallenges.firstObject;
-        
+    }
+    else if ([segue.identifier isEqualToString:@"loadFirstHard"]) {
+        ChallengeViewController *vc = segue.destinationViewController;
+        vc.currentChallenge = self.levelController.hardChallenges.firstObject;
     }
 }
 
