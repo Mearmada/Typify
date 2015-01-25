@@ -27,7 +27,12 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.tableView.rowHeight = 80;
     
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -39,6 +44,21 @@
     
     int row = (int)indexPath.row;
     cell.textLabel.text = [NSString stringWithFormat:@"Challenge %d", row + 1];
+    
+    //need to fix the below code so its not a static label
+    UILabel *recordLabel = [[UILabel alloc]initWithFrame:CGRectMake(230, 32, 130, 20)];
+    recordLabel.textAlignment=NSTextAlignmentRight;
+    
+    //this needs to house the code that records the record times for each challenge instance
+    
+//    Challenge *mychallenge = self.challengesArray[indexPath.row];
+    
+    
+    recordLabel.text = [NSString stringWithFormat:@"Record:"];
+    recordLabel.font = [UIFont systemFontOfSize:14.0];
+    UIColor * color = [UIColor colorWithRed:89/255.0f green:112/255.0f blue:127/255.0f alpha:1.0f];
+    recordLabel.textColor = color;
+    [cell.contentView addSubview:recordLabel];
     
     return cell;
 }

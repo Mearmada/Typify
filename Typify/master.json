@@ -1,11 +1,19 @@
 [
     {
-        "text": "the human torch was denied a bank loan",
-        "backspacePenalty": 0.5
+        "text": "Y0u Ar3 D0iNg W3LL!",
+        "backspacePenalty": 1,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        }
     },
     {
-        "text": "unique new york",
-        "backspacePenalty": 0.5
+        "text": "This is a Master Challenge.",
+        "backspacePenalty": 1,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        }
     }
 
 ]

@@ -33,7 +33,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEW-vt-d5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2775" y="656"/>
+            <point key="canvasLocation" x="2775" y="655"/>
         </scene>
         <!--Challenge-->
         <scene sceneID="ufC-wZ-h7g">
@@ -53,7 +53,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type the shit above" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gdc-cc-rw9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Copy the text above" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gdc-cc-rw9">
                                 <rect key="frame" x="56" y="125" width="488" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -234,6 +234,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c3L-zc-M3u"/>
+        <segue reference="U0R-9k-fVz"/>
     </inferredMetricsTieBreakers>
 </document>

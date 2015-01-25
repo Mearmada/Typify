@@ -39,5 +39,7 @@
 @property (nonatomic) UIColor *displayBackgroundColor;
 @property (nonatomic) UIFont *displayTextFont;
 @property (nonatomic) double backspacePenalty;
+@property (nonatomic) double currentRecord;
+@property(nonatomic, readonly, retain) UILabel *recordLabel;
 
 @end

@@ -12,10 +12,27 @@
 
 @end
 
+@implementation UINavigationController (StatusBar)
+
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return self.topViewController;
+}
+
+@end
+
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UIColor *green = [UIColor colorWithRed:1.0/255 green:141.0/255 blue:67.0/255 alpha:1];
+    CGFloat hue, saturation, brightness;
+    [green getHue:&hue saturation:&saturation brightness:&brightness alpha:nil];
+    brightness *= 0.58;
+    UIColor *darkGreen = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+    
+    [UINavigationBar appearance].barTintColor = green;
+    [UINavigationBar appearance].tintColor = darkGreen;
+    [UINavigationBar appearance].titleTextAttributes = @{ NSForegroundColorAttributeName: [UIColor whiteColor] };
     
     return YES;
 }

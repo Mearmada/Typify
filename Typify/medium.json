@@ -1,6 +1,19 @@
 [
     {
-        "text": "potato onion monionieownfiodsji",
-        "backspacePenalty": 20
+        "text": "The three pigs packed a picnic",
+        "backspacePenalty": 0,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        }
+    },
+    {
+        "text": "The eleven lions loved licking lemons",
+        "backspacePenalty": 0,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        }
     }
+
 ]

@@ -403,9 +403,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: John Heaton (C763AB6SMF)";
 				INFOPLIST_FILE = Typify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2a78f487-c1cc-4817-b102-47ef6e2fa6f5";
 			};
 			name = Debug;
 		};
@@ -413,9 +415,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: John Heaton (C763AB6SMF)";
 				INFOPLIST_FILE = Typify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2a78f487-c1cc-4817-b102-47ef6e2fa6f5";
 			};
 			name = Release;
 		};

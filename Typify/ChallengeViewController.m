@@ -31,6 +31,21 @@
         [self startChallenge:self.currentChallenge];
         self.title = [NSString stringWithFormat:@"Challenge %d", self.challengeIndex + 1];
     }
+    
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self.textField addTarget:self action:@selector(correctnessChecker) forControlEvents:UIControlEventEditingChanged];
+}
+
+- (NSArray *)keyCommands {
+    return @[[UIKeyCommand keyCommandWithInput:@"r" modifierFlags:UIKeyModifierCommand action:@selector(restartCurrentChallenge:)]];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -72,13 +87,36 @@
     
     self.timerLabel.text = [NSString stringWithFormat:@"Elapsed time: %.02f seconds", self.elapsedTime];
     
-    if ([self.textField.text isEqualToString:self.currentChallenge.text]) {
-        // you winz
+
+}
+
+- (void)correctnessChecker {
+    
+    BOOL fullyMatches = [self.textField.text isEqualToString:self.currentChallenge.text];
+    BOOL beginningMatches = [self.currentChallenge.text hasPrefix:self.textField.text];
+    
+    if (fullyMatches == YES) {
+        
         [self.currentTimer invalidate];
         
-        NSLog(@"you win! it took you %f seconds", self.elapsedTime);
+        NSLog(@"You Win! it took you %f seconds", self.elapsedTime);
         
         self.elapsedTime = 0;
+        [self.textField resignFirstResponder];
+    }
+    else if (beginningMatches == NO) {
+
+        if (self.textField.text.length == 0) {
+            //for if there isnt anything in the text field, cant be wrong if they havnt typed.
+            NSLog(@"You have not typed anything.");
+        }
+        else {
+            NSLog(@"Oops, you have made a mistake!");
+            self.textField.textColor = [UIColor redColor];
+        }
+    }
+    else if (beginningMatches == YES) {
+        self.textField.textColor = [UIColor blackColor];
     }
 }
 

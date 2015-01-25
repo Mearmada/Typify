@@ -1,11 +1,47 @@
 [
     {
-        "text": "potato onion monionieownfiodsji",
-        "backspacePenalty": 20,
+        "text": "Welcome to Typify",
+        "backspacePenalty": 0,
         "font": {
             "name": "Avenir-Light",
             "size": 30
         },
-        "textColor": [255, 0, 0, 255]
+        "textColor": [0, 0, 0, 255]
+    },
+    {
+        "text": "this is easy",
+        "backspacePenalty": 0,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        },
+        "textColor": [0, 0, 0, 255]
+    },
+    {
+        "text": "what time is it?",
+        "backspacePenalty": 0,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        },
+        "textColor": [0, 0, 0, 255]
+    },
+    {
+        "text": "you're still playing?",
+        "backspacePenalty": 0,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        },
+        "textColor": [0, 0, 0, 255]
+    },
+    {
+        "text": "check one two",
+        "backspacePenalty": 0,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        },
+        "textColor": [0, 0, 0, 255]
     }
 ]

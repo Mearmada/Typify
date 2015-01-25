@@ -1,6 +1,18 @@
 [
     {
-        "text": "potato onion monionieownfiodsji",
-        "backspacePenalty": 20
+        "text": "Benjamin Franklin was born in Boston, Massachusetts.",
+        "backspacePenalty": 0.5,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        }
+    },
+    {
+        "text": "Vladimir Putin has been the President of Russia since May 7th, 2012.",
+        "backspacePenalty": 0.5,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        }
     }
 ]

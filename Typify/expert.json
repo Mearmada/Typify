@@ -1,6 +1,18 @@
 [
     {
-        "text": "potato onion monionieownfiodsji",
-        "backspacePenalty": 20
+        "text": "How can a clam cram in a clean cream can?",
+        "backspacePenalty": 1,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        }
+    },
+    {
+        "text": "Friendly Frank flips fifty fine flapjacks.",
+        "backspacePenalty": 1,
+        "font": {
+            "name": "Avenir-Light",
+            "size": 30
+        }
     }
 ]
